@@ -70,7 +70,11 @@
 </li>
 <li><a href="#product-scope">Appendix B: Product Scope</a></li>
 <li><a href="#user-stories">Appendix C: User Stories</a></li>
-<li><a href="#use-cases">Appendix D: Use Cases</a></li>
+<li><a href="#use-cases">Appendix D: Use Cases</a>
+<ul class="sectlevel2">
+<li><a href="#use-case-uc05-pay-bonus-increment-or-decrement">Use case: UC05 -  Pay/Bonus increment or decrement</a></li>
+</ul>
+</li>
 <li><a href="#non-functional-requirements">Appendix E: Non Functional Requirements</a></li>
 <li><a href="#glossary">Appendix F: Glossary</a></li>
 <li><a href="#product-survey">Appendix G: Product Survey</a></li>
@@ -1953,7 +1957,7 @@ for <code>RemarkCommandParser</code>.</p>
 <p><strong>Target user profile</strong>: Human Resource (HR) Department</p>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>: Resolve accessibility problems and provide a centralised database for end users’ convenience.</p>
+<p><strong>Value proposition</strong>: Resolve accessibility problems and provide a centralised database for end users’ convenience</p>
 </div>
 <div class="paragraph">
 <p><strong>Product Scope</strong>:</p>
@@ -1961,47 +1965,49 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Centralised database system with different fields so as to support various features stated below:</p>
+<p>A centralised system with specific fields required by HR. Some fields are as follow:</p>
 <div class="literalblock">
 <div class="content">
-<pre>Ensure correct payout to employees including bonus and salary</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Ensure expenses claimed including medication and transportation</pre>
+<pre>Employees' salary and bonus</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Ensure leave handling in a proper way</pre>
-</div>
-</div>
-</li>
-<li>
-<p>Timetable of working schedule</p>
-</li>
-<li>
-<p>Report generation:</p>
-<div class="literalblock">
-<div class="content">
-<pre>Claim history</pre>
+<pre>Employees' expenses claims, such as medical and transport</pre>
 </div>
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>Salary slip</pre>
+<pre>Employees' leave balance</pre>
 </div>
 </div>
 </li>
 <li>
-<p>Enable online communication via internal messenger</p>
+<p>Working schedule of employees (in a timetable format, GUI)</p>
 </li>
 <li>
-<p>Full training list</p>
+<p>Generation of reports such as:</p>
+<div class="literalblock">
+<div class="content">
+<pre>Employees' claim history</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Employees' salary slip</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Employees' past training(s)</pre>
+</div>
+</div>
 </li>
 <li>
-<p>GUI</p>
+<p>An internal messenger to enable communication between the HR department and employees</p>
+</li>
+<li>
+<p>Function to schedule training for employees</p>
 </li>
 </ul>
 </div>
@@ -2031,166 +2037,163 @@ for <code>RemarkCommandParser</code>.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have filter functions</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search for more specific data</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">update current employee’s data</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">update the employee’s data accordingly</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add new employee’s data</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add new employee’s data into the system</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">delete old employee’s data</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">remove employee’s details that are no longer required</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff(handling payroll)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff(handling payroll)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have auto calculation of pay and bonus increments</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avoid doing the calculations manually</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">New HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">New HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view all the available functions</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">know the available functions for use in the application</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff(handling financial matters)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff(handling financial matters)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view all the expenses incurred by each employee that has yet to be claimed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avoid keeping track of them manually</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have a search function</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search for employee’s data easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff(handling financial matters)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff(handling financial matters)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add expenses incurred by employee at individual level</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keep track of employee’s expenses that is up for claims easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Manager</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have a function to approve or reject leave/off</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">approve or reject employee’s leave/off easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff (handling financial matters)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling financial matters)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">remove expenses incurred by employee after the claim is completed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keep track of employee’s claimed expenses easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR director</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Director</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have different user access</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">control the information access within the system</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Manager</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">generate a report of my employees' data</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have an overview of the employees</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have departments tagged to each personnel</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">search for staffs in a specific department easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have shorter commands</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">reduce the amount of typing required</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have an autocomplete function</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">type my commands partially and have lower risks of typing wrong commands</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Manager</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">track who last made changes to the work schedule</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">find out who to clarify doubts with (if any)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Manager</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view the work schedule for each day</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">find out which employees are working on which day</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Manager</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have a function to handle leave related issues</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">approve/disprove employee’s leave</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">undo the last change</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">correct my mistake easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">redo the last change</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">correct my undo easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Paranoid HR staff</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paranoid HR Staff</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have the option to hide personally identifiable information</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">lower the chances of my information being leaked or seen</p></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="use-cases"><a class="link" href="#use-cases">Appendix D: Use Cases</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>(For all use cases below, the <strong>System</strong> is the <code>AddressBook</code> and the <strong>Actor</strong> is the <code>user</code>, unless specified otherwise)</p>
+<p>(For all use cases below, the <strong>System</strong> is the <code>CHRS</code> and the <strong>Actor</strong> is the <code>HR Staff</code>, unless specified otherwise)</p>
 </div>
-<h3 id="use-case-delete-person" class="discrete">Use case: Delete person</h3>
+<h3 id="use-case-uc01-employee-data-filter-function" class="discrete">Use case: UC01 -  Employee data filter function</h3>
 <div class="paragraph">
 <p><strong>MSS</strong></p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User requests to list persons</p>
+<p>User requests to filter employees’ data</p>
 </li>
 <li>
-<p>AddressBook shows a list of persons</p>
+<p>CHRS shows the available options to filter</p>
 </li>
 <li>
-<p>User requests to delete a specific person in the list</p>
+<p>User input the filter type</p>
 </li>
 <li>
-<p>AddressBook deletes the person</p>
+<p>CHRS output the employees’ data of the specific filter</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
@@ -2203,28 +2206,411 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>2a. The list is empty.</p>
+<p>1a.</p>
 <div class="paragraph">
 <p>Use case ends.</p>
 </div>
 </li>
+</ul>
+</div>
+<h3 id="use-case-uc02-update-employee-s-data" class="discrete">Use case: UC02 -  Update employee&#8217;s data</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
 <li>
-<p>3a. The given index is invalid.</p>
+<p>User requests to update specific employees’ data</p>
+</li>
+<li>
+<p>CHRS shows the employee’s current data and prompts the user whether an edit will be performed</p>
+</li>
+<li>
+<p>User confirms whether there will be an edit</p>
+</li>
+<li>
+<p>CHRS requests for the field to be updated</p>
+</li>
+<li>
+<p>User input the field to be updated</p>
+</li>
+<li>
+<p>CHRS requests for the updated information</p>
+</li>
+<li>
+<p>User input the relevant information</p>
+</li>
+<li>
+<p>CHRS updates relevant data of the employee and prompts the user whether there will be another field to be updated</p>
+<div class="paragraph">
+<p>Steps 3 to 8 are repeated until user input no to the request of whether another field will be updated</p>
+</div>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>3a1. AddressBook shows an error message.</p>
+<p>1a.</p>
 <div class="paragraph">
-<p>Use case resumes at step 2.</p>
+<p>Use case ends.</p>
 </div>
 </li>
 </ul>
 </div>
+<h3 id="use-case-uc03-add-employee-s-data" class="discrete">Use case: UC03 -  Add employee&#8217;s data</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User input new employee’s data</p>
+</li>
+<li>
+<p>CHRS shows the employee’s data and requests for confirmation</p>
+</li>
+<li>
+<p>User confirms the addition</p>
+</li>
+<li>
+<p>CHRS stores employee’s data and shows successful message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
 </li>
 </ul>
 </div>
+<h3 id="use-case-uc04-delete-employee-s-data" class="discrete">Use case: UC04 -  Delete employee&#8217;s data</h3>
 <div class="paragraph">
-<p><em>{More to be added}</em></p>
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to delete employee’s data</p>
+</li>
+<li>
+<p>CHRS shows the employee’s data and prompts for confirmation</p>
+</li>
+<li>
+<p>User confirms the deletion</p>
+</li>
+<li>
+<p>CHRS deletes employee’s data and shows successful message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="actor-hr-staff-handling-payroll" class="discrete">Actor: HR Staff (Handling payroll)</h3>
+<div class="sect2">
+<h3 id="use-case-uc05-pay-bonus-increment-or-decrement"><a class="link" href="#use-case-uc05-pay-bonus-increment-or-decrement">Use case: UC05 -  Pay/Bonus increment or decrement</a></h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to modify employee’s pay/bonus</p>
+</li>
+<li>
+<p>CHRS shows the requested employee’s data</p>
+</li>
+<li>
+<p>User keys in the increment or decrement percentage</p>
+</li>
+<li>
+<p>CHRS shows the updated employee’s pay/bonus and requests for
+confirmation</p>
+</li>
+<li>
+<p>User confirms the update</p>
+</li>
+<li>
+<p>CHRS updates the employee’s pay/bonus and shows successful message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc06-view-available-functions-or-commands" class="discrete">Use case: UC06 -  View available functions or commands</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to view the available functions or commands in CHRS</p>
+</li>
+<li>
+<p>CHRS shows the list of available functions or commands</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<h3 id="actor-hr-staff-handling-financial-matters" class="discrete">Actor: HR Staff (Handling financial matters)</h3>
+<h3 id="use-case-uc07-view-expenses" class="discrete">Use case: UC07 – View expenses</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to view expenses incurred by an employee</p>
+</li>
+<li>
+<p>CHRS shows the list of expenses incurred by the employee</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc08-search-function" class="discrete">Use case: UC08 – Search function</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests to use the search function</p>
+</li>
+<li>
+<p>CHRS evokes the search function</p>
+</li>
+<li>
+<p>User enters the employee’s name</p>
+</li>
+<li>
+<p>CHRS shows the data associated with the employee’s name</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="use-case-uc09-add-expenses" class="discrete">Use case: UC09 – Add expenses</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User input an employee’s name</p>
+</li>
+<li>
+<p>CHRS shows the available categories and prompt the user for input of
+which category</p>
+</li>
+<li>
+<p>User input the category for the expenses to be added</p>
+</li>
+<li>
+<p>CHRS requests user for the amount spent</p>
+</li>
+<li>
+<p>User input the amount spent</p>
+</li>
+<li>
+<p>CHRS shows the expenses incurred by the employee and requests for
+confirmation</p>
+</li>
+<li>
+<p>User confirms the addition</p>
+</li>
+<li>
+<p>CHRS stores the new expenses and shows successful message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="actor-hr-manager" class="discrete">Actor: HR Manager</h3>
+<h3 id="use-case-uc10-approve-or-reject-leave-off-function" class="discrete">Use case: UC10 – Approve or reject leave/off function</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User requests for approve or reject leave/off function</p>
+</li>
+<li>
+<p>CHRS displays the list of employees’ names who applied for leave and
+request for employee’s name</p>
+</li>
+<li>
+<p>User input the employee’s name</p>
+</li>
+<li>
+<p>CHRS requests for approval or rejection</p>
+</li>
+<li>
+<p>User input approve or reject</p>
+</li>
+<li>
+<p>CHRS updates the leave/off accordingly and shows successful message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+<h3 id="actor-hr-staff-handling-financial-matters-2" class="discrete">Actor: HR Staff (Handling financial matters)</h3>
+<h3 id="use-case-uc11-remove-expenses" class="discrete">Use case: UC11 – Remove expenses</h3>
+<div class="paragraph">
+<p><strong>MSS</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>User input an employee’s name</p>
+</li>
+<li>
+<p>CHRS shows the available categories and request the user for input of
+which category</p>
+</li>
+<li>
+<p>User input the category for the expenses to be removed</p>
+</li>
+<li>
+<p>CHRS shows the expenses incurred by the employee and requests user
+for the amount to be removed</p>
+</li>
+<li>
+<p>User input the amount spent</p>
+</li>
+<li>
+<p>CHRS shows the updated expenses incurred by the employee and
+requests for confirmation</p>
+</li>
+<li>
+<p>User confirms the removal</p>
+</li>
+<li>
+<p>CHRS removes the expenses and shows successful message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Extensions</strong></p>
+</div>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a.</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -2233,6 +2619,12 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Should have different user access rights</p>
+</li>
+<li>
+<p>Should be able to run on both 32-bit and 64-bit OS</p>
+</li>
 <li>
 <p>Should work on any <a href="#mainstream-os">mainstream OS</a> as long as it has Java <code>9</code> or higher installed.</p>
 </li>
@@ -2243,9 +2635,6 @@ for <code>RemarkCommandParser</code>.</p>
 <p>A user with above average typing speed, for instance 60 words per minute, for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
 </li>
 </ol>
-</div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
 </div>
 </div>
 </div>
@@ -2416,4 +2805,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-19 16:23:35 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-19 17:26:37 UTC</div></div></div></body></html>
