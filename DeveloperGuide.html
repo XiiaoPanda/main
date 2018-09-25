@@ -2057,7 +2057,7 @@ for <code>RemarkCommandParser</code>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff(handling payroll)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling payroll)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">have auto calculation of pay and bonus increments</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avoid doing the calculations manually</p></td>
 </tr>
@@ -2069,7 +2069,7 @@ for <code>RemarkCommandParser</code>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff(handling financial matters)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling financial matters)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">view all the expenses incurred by each employee that has yet to be claimed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">avoid keeping track of them manually</p></td>
 </tr>
@@ -2081,7 +2081,7 @@ for <code>RemarkCommandParser</code>.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff(handling financial matters)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling financial matters)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">add expenses incurred by employee at individual level</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keep track of employee’s expenses that is up for claims easily</p></td>
 </tr>
@@ -2096,6 +2096,24 @@ for <code>RemarkCommandParser</code>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling financial matters)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">remove expenses incurred by employee after the claim is completed</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">keep track of employee’s claimed expenses easily</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling recruitment)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I want to list all the past recruitment post(s) created</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">keep track of what position has already been posted for recruiting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling recruitment)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I want to add recruitment post(s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">put up new recruitment post(s) for newly available positions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HR Staff (handling recruitment)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I want to remove recruitment post(s)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">take down old recruitment post(s) for positions that have already been filled</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
@@ -2202,9 +2220,22 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>3a. CHRS detects an invalid filter type input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. CHRS requests for correct filter option</p>
+</li>
+<li>
+<p>3a2. User input the filter type</p>
+</li>
+<li>
+<p>Steps 3a1 - 3a2 are repeated until the data entered are correct</p>
 <div class="paragraph">
-<p>Use case ends.</p>
+<p>Use case resumes from step 4.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2253,9 +2284,115 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that requested employee’s data is not in the system</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS informs user that the data can’t be found</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. CHRS detects that there are employees with the same name</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. CHRS lists down all the employee’s data with duplicate names</p>
+</li>
+<li>
+<p>1b2. User selects the employee’s data to be updated based on index</p>
+<div class="paragraph">
+<p>Use case resume from step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2a. 180 seconds passed without any input from the user</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2b. User requests not to perform any edits</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2c. CHRS detects invalid confirmation input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2c1. CHRS prompts users for correct input</p>
+</li>
+<li>
+<p>2c2. User enters new input</p>
+</li>
+<li>
+<p>Step 2c1 – 2c2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 3.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. CHRS detects that an invalid field has been entered</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>5a1. CHRS requests for the field to be updated</p>
+</li>
+<li>
+<p>5a2. User input the field to be updated</p>
+</li>
+<li>
+<p>Step 5a1 - 5a2 are repeated until a valid field has been entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 6.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>7a. CHRS detects an invalid data input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>7a1. CHRS requests for correct data</p>
+</li>
+<li>
+<p>7a2. Users input new data</p>
+</li>
+<li>
+<p>Steps 7a1 - 7a2 are repeated until the input is correct</p>
+<div class="paragraph">
+<p>Use case resumes from step 8.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2289,9 +2426,48 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>2a. 180 seconds passed without any input from the user</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. CHRS shows the user a cancellation message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2b. User requests not to perform the addition</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2c. CHRS detects invalid confirmation input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2c1. CHRS prompts users for correct input</p>
+</li>
+<li>
+<p>2c2. User enters new input</p>
+</li>
+<li>
+<p>Step 2c1 – 2c2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 3.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2325,9 +2501,80 @@ for <code>RemarkCommandParser</code>.</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that requested employee’s data is not in the system</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS informs user about the data not being found</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. CHRS detects the existence of duplicate names</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. CHRS requests for mobile number</p>
+</li>
+<li>
+<p>1b2. User input the correct mobile number</p>
+</li>
+<li>
+<p>Step 1b1 - 1b2 are repeated until correct number is input</p>
+<div class="paragraph">
+<p>Use case resumes from step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2a. 180 seconds passed without any input from the user</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2a1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2b. User requests not to perform the addition</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2b1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>2c. CHRS detects invalid confirmation input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>2c1. CHRS prompts users for correct input</p>
+</li>
+<li>
+<p>2c2. User enters new input</p>
+</li>
+<li>
+<p>Step 2c1 – 2c2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 3.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2369,9 +2616,98 @@ confirmation</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that requested employee’s data is not in the system</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS informs user about the data not being found
+=
+Use case ends.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>1b. CHRS detects the existence of duplicate names</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1b1. CHRS requests for mobile number</p>
+</li>
+<li>
+<p>1b2. User input the correct mobile number</p>
+</li>
+<li>
+<p>Step 1b1 - 1b2 are repeated until correct number is input</p>
+<div class="paragraph">
+<p>Use case resumes from step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. CHRS detects an error in the entered data</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. CHRS requests for correct data</p>
+</li>
+<li>
+<p>3a2. User enters new data</p>
+</li>
+<li>
+<p>Step 3a1 - 3a2 are repeated until correct data is input</p>
+<div class="paragraph">
+<p>Use case resumes from step 4.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>4a. 180 seconds passed without any input from the user</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>4a1. CHRS shows the user a cancellation message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>4b. User requests not to perform the addition</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>4b1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>4c. CHRS detects invalid confirmation input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>4c1. CHRS prompts users for correct input</p>
+</li>
+<li>
+<p>4c2. User enters new input</p>
+</li>
+<li>
+<p>Step 4c1 – 4c2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 5.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2417,9 +2753,16 @@ confirmation</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that requested employee’s data is not in the system</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS informs user about the data not being found</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2453,9 +2796,22 @@ confirmation</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>3a. CHRS detect that employee’s name does not exist</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. CHRS requests for correct employee’s name</p>
+</li>
+<li>
+<p>3a2. User input employee’s name</p>
+</li>
+<li>
+<p>Step 3a1 - 3a2 are repeated until the input is a correct employee’s name</p>
 <div class="paragraph">
-<p>Use case ends.</p>
+<p>Use case resumes from step 4.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2503,9 +2859,105 @@ confirmation</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that employee’s name does not exist</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS requests for correct employee’s name</p>
+</li>
+<li>
+<p>1a2. User input employee’s name</p>
+</li>
+<li>
+<p>Steps 1a1 – 1a2 are repeated until the input is a correct employee’s name</p>
+<div class="paragraph">
+<p>Use case resumes from step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. CHRS detects that an invalid category has been entered</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. CHRS requests for correct category</p>
+</li>
+<li>
+<p>3a2. User input category</p>
+</li>
+<li>
+<p>Steps 3a1 – 3a2 are repeated until the input is a valid category</p>
+<div class="paragraph">
+<p>Use case resumes from step 4.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. CHRS detects an invalid data input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>5a1. CHRS requests for correct data</p>
+</li>
+<li>
+<p>5a2. User input new data</p>
+</li>
+<li>
+<p>Step 5a1 – 5a2 are repeated until the input is correct</p>
+<div class="paragraph">
+<p>Use case resumes from step 6.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. 180 seconds passed without any input from the user</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>6a1. CHRS shows the user a cancellation message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6b. User requests not to perform the addition</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>6b1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6c. CHRS detects invalid confirmation input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>6c1. CHRS prompts users for correct input</p>
+</li>
+<li>
+<p>6c2. User enters new input</p>
+</li>
+<li>
+<p>Step 6c1 – 6c2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 7.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2547,9 +2999,54 @@ request for employee’s name</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that the leave/off application portal is empty</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS inform the user that the portal has no application of leave/off</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. CHRS detects that employee’s name does not exist</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. CHRS requests for correct employee’s name</p>
+</li>
+<li>
+<p>3a2. User input employee’s name</p>
+</li>
+<li>
+<p>Steps 3a1 – 3a2 are repeated until the input is a correct employee’s name</p>
+<div class="paragraph">
+<p>Use case resumes from step 6.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. CHRS detects an invalid data input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>5a1. CHRS requests for correct data input</p>
+</li>
+<li>
+<p>5a2. User input new input</p>
+</li>
+<li>
+<p>Step 5a1 - 5a2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use cases resume from step 8.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2599,9 +3096,105 @@ requests for confirmation</p>
 <div class="ulist none">
 <ul class="none">
 <li>
-<p>1a.</p>
+<p>1a. CHRS detects that employee’s name does not exist</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>1a1. CHRS requests for correct employee’s name</p>
+</li>
+<li>
+<p>1a2. User input employee’s name</p>
+</li>
+<li>
+<p>Steps 1a1 – 1a2 are repeated until the input is a correct employee’s name</p>
+<div class="paragraph">
+<p>Use case resumes from step 2.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3a. CHRS detects that an invalid category has been entered</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>3a1. CHRS requests for correct category</p>
+</li>
+<li>
+<p>3a2. User input category</p>
+</li>
+<li>
+<p>Steps 3a1 – 3a2 are repeated until the input is an appropriate category</p>
+<div class="paragraph">
+<p>Use case resumes from step 4.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>5a. CHRS detects an invalid data input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>5a1. CHRS requests for correct data</p>
+</li>
+<li>
+<p>5a2. User input new data</p>
+</li>
+<li>
+<p>Step 5a1 – 5a2 are repeated until the input is correct</p>
+<div class="paragraph">
+<p>Use case resumes from step 6.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6a. 180 seconds passed without any input from the user</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>6a1. CHRS shows the user a cancellation message</p>
 <div class="paragraph">
 <p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6b. User requests not to perform the removal</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>6b1. CHRS shows the user a cancellation message</p>
+<div class="paragraph">
+<p>Use case ends.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>6c. CHRS detects invalid confirmation input</p>
+<div class="ulist none">
+<ul class="none">
+<li>
+<p>6c1. CHRS prompts users for correct input</p>
+</li>
+<li>
+<p>6c2. User enters new input</p>
+</li>
+<li>
+<p>Step 6c1 – 6c2 are repeated until correct input is entered</p>
+<div class="paragraph">
+<p>Use case resumes from step 7.</p>
+</div>
+</li>
+</ul>
 </div>
 </li>
 </ul>
@@ -2799,4 +3392,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-19 17:28:06 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2018-09-25 04:25:13 UTC</div></div></div></body></html>
