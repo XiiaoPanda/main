@@ -54,7 +54,7 @@ public class DeleteCommand extends Command {
         set.add(ModelTypes.ADDRESS_BOOK);
         model.deletePerson(personToDelete);
 
-        if deleteAllExpensesFromPerson (model, personToDelete)) {
+        if (deleteAllExpensesFromPerson (model, personToDelete)) {
             set.add(ModelTypes.EXPENSES_LIST);
         }
 
