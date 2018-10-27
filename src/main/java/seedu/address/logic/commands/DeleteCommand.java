@@ -76,7 +76,9 @@ public class DeleteCommand extends Command {
                 && targetIndex.equals(((DeleteCommand) other).targetIndex)); // state check
     }
 
-
+    /**
+     *  Deletes all expenses related to person
+     */
     public boolean deleteAllExpensesFromPerson (Model model, Person personToDelete) {
         EmployeeIdExpensesContainsKeywordsPredicate predicatEmployeeId;
         List<String> employeeIdList = new ArrayList<>();
